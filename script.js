@@ -6,15 +6,15 @@ document.querySelectorAll('.question').forEach(question => {
     section.classList.toggle('active');
 
     if (section.classList.contains('active')) {
-      img.src = '/FAQ_accordion/assets/icon-minus.svg';
+      img.src = 'assets/icon-minus.svg';
     } else {
-      img.src = '/FAQ_accordion/assets/icon-plus.svg';
+      img.src = 'assets/icon-plus.svg';
     }
 
     document.querySelectorAll('section').forEach(currentSection => {
       if (currentSection !== section) {
         currentSection.classList.remove('active');
-        currentSection.querySelector('img').src = '/FAQ_accordion/assets/icon-plus.svg';
+        currentSection.querySelector('img').src = 'assets/icon-plus.svg';
       }
     });
 
@@ -24,5 +24,5 @@ document.querySelectorAll('.question').forEach(question => {
 
 document.querySelectorAll('section.active').forEach(activeSection => {
   const img = activeSection.querySelector('.question img');
-  img.src = '/FAQ_accordion/assets/icon-minus.svg';
+  img.src = 'assets/icon-minus.svg';
 });
